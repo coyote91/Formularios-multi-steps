@@ -1,9 +1,33 @@
 
-var fname, lname, gender, country;
+var fname, lname, gender, country, width;
 
 function _(x)
 {
   return document.getElementById(x);
+}
+
+function barraprogreso(n)
+{
+            width = 1;
+            width = n;
+
+        var id = setInterval(frame, 10);
+
+        function frame()
+        {
+
+           if(width > 100)  /* le quite el >=  para llegar a 100% */
+           {
+              clearInterval(id);
+            }
+          else{
+
+             //width++;
+            _("myBar").style.width = width + '%';
+            _("myBar").innerHTML = width * 1  + '%';
+
+            }
+       } // END FUNCTION FRAME
 }
 
 function processPhase1()
@@ -15,11 +39,16 @@ function processPhase1()
     {
         _("phase1").style.display = "none";
         _("phase2").style.display = "block";
-         _("progressBar").value = 33;
+        /* _("progressBar").value = 33; */
+
+
+             width = 40;
+          barraprogreso(width);
+
         _("status").innerHTML = "Phase 2 of 3";
     }
     else
-    {
+    {_("progressBar")
         alert("Please fill in the fields");
     }
 
@@ -34,7 +63,12 @@ function processPhase2()
 
     _("phase2").style.display = "none";
      _("phase3").style.display = "block";
-     _("progressBar").value = 66;
+     /* _("progressBar").value = 66; */
+
+      width = 70;
+        barraprogreso(width);
+
+
      _("status").innerHTML = "Phase 3 of 3";
 
     }
@@ -57,7 +91,13 @@ function processPhase3()
       _("display_lname").innerHTML = lname;
       _("display_gender").innerHTML = gender;
       _("display_country").innerHTML = country;
-      _("progressBar").value = 100;
+
+      /*  _("progressBar").value = 100; */
+
+
+         width = 100;
+              barraprogreso(width);
+
       _("status").innerHTML = "Data Overview";
   }
   else

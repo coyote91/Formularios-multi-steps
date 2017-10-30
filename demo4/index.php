@@ -7,7 +7,12 @@
 </head>
 <body>
 
-<progress id="progressBar" value="0" max="100" style=width:250px;></progress>
+<!-- <progress id="progressBar" value="0" max="100" style="width:250px; "></progress> -->
+
+<div id="myProgress">
+  <div id="myBar">1%</div>
+</div>
+
 
 <h3 id="status">Phase 1 of 3</h3>
 
@@ -18,7 +23,7 @@
         Last Name:
         <input id="lastname" name="lastname"><br>
         <button onclick="processPhase1()">Continue</button>
-        
+
     </div>
 
     <div id="phase2"> Gender:
@@ -42,8 +47,8 @@
 
         <br>
 
-
         <button onclick="processPhase3()">Continue</button>
+        
     </div>
 
     <div id="show_all_data"> First Name: <span id="display_fname"></span>
