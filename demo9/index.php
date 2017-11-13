@@ -7,6 +7,13 @@
   </head>
   <body>
 
+    <!--
+    Fuente
+
+       https://www.solvetic.com/tutoriales/article/2501-forma-de-crear-formulario-de-varias-paginas-utilizando-script-php/
+
+  -->
+
     <div class="container">
     <div class="main">
     <h2>Formulario 1</h2>
